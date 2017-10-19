@@ -31,6 +31,7 @@ class App extends React.Component {
       return (
         <div>
           <Header/>
+          <Content/>
           <table>
             <tbody>
             {this.state.data.map((person, i) => <TableRow key = {i}
