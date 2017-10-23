@@ -12,31 +12,17 @@ class App extends React.Component {
    };
 
    updateState(e) {
-      this.setState({data: e.target.value});
+      this.setState({data: 'data updated...'});
    };
 
    render() {
        return (
           <div>
-             <input type = "text" value = {this.state.data}
-                onChange = {this.updateState} />
+             <button onClick = {this.updateState}>CLICK</button>
              <h4>{this.state.data}</h4>
           </div>
        );
     }
- }
-
- class Content extends React.Component {
-
-   render() {
-     return (
-       <div>
-        <input type = "text" value = {this.props.myDataProp}
-          onCHange = {this.props.updateStateProp} />
-        <h3>{this.props.myDataProp}</h3>
-      </div>
-     )
-   }
  }
 
 //
