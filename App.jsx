@@ -26,6 +26,19 @@ class App extends React.Component {
     }
  }
 
+ class Content extends React.Component {
+
+   render() {
+     return (
+       <div>
+        <input type = "text" value = {this.props.myDataProp}
+          onCHange = {this.props.updateStateProp} />
+        <h3>{this.props.myDataProp}</h3>
+      </div>
+     )
+   }
+ }
+
 //
 // class Content extends React.Component {
 //   componentWillMount() {
