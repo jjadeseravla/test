@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 class App extends React.Component {
    constructor(props) {
@@ -9,11 +10,18 @@ class App extends React.Component {
       }
 
       this.updateState = this.updateState.bind(this);
+      this.clearInput = this.clearInput.bind(this);
    };
 
    updateState(e) {
       this.setState({text: 'He knows now :)'});
-   };
+   }
+
+   clearInput() {
+      this.setState({data: ''});
+      ReactDOM.findDOMNode(this.refs.myInput).focus();
+   }
+
 
    render() {
        return (
@@ -25,8 +33,9 @@ class App extends React.Component {
              <button><img src="./images/dino.jpg" alt="dino4" onClick = {this.updateState}/></button>
              <button><img src="./images/madDino.png" alt="dino5" onClick = {this.updateState}/></button>
              <h3> Thank you for answering our survey, please leave your email if you would like updates </h3>
-             <input type = "text" value = {this.state.data}
-               onChange = {this.updateState} />
+             <input value = {this.state.data} onChange = {this.updateState}
+             ref = "myInput"></input>
+          <button onClick = {this.clearInput}>Enter</button>
           </div>
        );
 
