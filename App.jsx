@@ -5,21 +5,22 @@ class App extends React.Component {
       super(props);
 
       this.state = {
-         data: 'initial data...'
+         data: 'Please press Dino to let him know how you feel'
       }
 
       this.updateState = this.updateState.bind(this);
    };
 
    updateState(e) {
-      this.setState({data: 'data updated...'});
+      this.setState({data: 'He knows now :)'});
    };
 
    render() {
        return (
           <div>
-             <button onClick = {this.updateState}>CLICK</button>
+             <button><img src="./images/dino.jpg" alt="dino" onClick = {this.updateState}/></button>
              <h4>{this.state.data}</h4>
+              {/* <img src={'./images/dino.jpg'} />  */}
           </div>
        );
     }
