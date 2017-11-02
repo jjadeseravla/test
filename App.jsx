@@ -24,7 +24,9 @@ class App extends React.Component {
              <button><img src="./images/dino.jpg" alt="dino3" onClick = {this.updateState}/></button>
              <button><img src="./images/dino.jpg" alt="dino4" onClick = {this.updateState}/></button>
              <button><img src="./images/madDino.png" alt="dino5" onClick = {this.updateState}/></button>
-             <h2> Thank you for answering our survey </h2>
+             <h3> Thank you for answering our survey, please leave your email if you would like updates </h3>
+             <input type = "text" value = {this.state.data}
+               onChange = {this.updateState} />
           </div>
        );
 
