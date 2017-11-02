@@ -18,14 +18,16 @@ class App extends React.Component {
    render() {
        return (
           <div>
-            <h4>{this.state.text}</h4>
+            <h2>{this.state.text}</h2>
              <button><img src="./images/smileDino.png" alt="dino1" onClick = {this.updateState}/></button>
              <button><img src="./images/dino.jpg" alt="dino2" onClick = {this.updateState}/></button>
              <button><img src="./images/dino.jpg" alt="dino3" onClick = {this.updateState}/></button>
              <button><img src="./images/dino.jpg" alt="dino4" onClick = {this.updateState}/></button>
              <button><img src="./images/madDino.png" alt="dino5" onClick = {this.updateState}/></button>
+             <h2> Thank you for answering our survey </h2>
           </div>
        );
+
     }
  }
 
