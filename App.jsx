@@ -19,7 +19,7 @@ class App extends React.Component {
        return (
           <div>
             <h4>{this.state.data}</h4>
-             <button><img src="./images/smileDino.jpg" alt="dino1" onClick = {this.updateState}/></button>
+             <button><img src="./images/smileDino.png" alt="dino1" onClick = {this.updateState}/></button>
              <button><img src="./images/dino.jpg" alt="dino2" onClick = {this.updateState}/></button>
              <button><img src="./images/dino.jpg" alt="dino3" onClick = {this.updateState}/></button>
              <button><img src="./images/dino.jpg" alt="dino4" onClick = {this.updateState}/></button>
